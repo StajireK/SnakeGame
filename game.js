@@ -10,7 +10,7 @@ const ctx = canvas.getContext("2d");
 //game
 let gameIsRunning = true;
 
-const fps = 15;
+let fps = 10;
 const tileSize = 25;
 const tileCountX = canvas.width / tileSize;
 const tileCountY = canvas.height / tileSize;
@@ -91,6 +91,7 @@ function moveStuff() {
         title.textContent = score; */
         title.textContent = ++score;
         snakeLenght++;
+        fps++;
         resetFood();
     }
 
